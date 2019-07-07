@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.pms_rdso">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,8 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CreateNewProject"></activity>
-        <activity android:name=".project_detail" />
+        <activity
+            android:name=".CreateNewProject"
+            android:label="New project"/>
+        <activity
+            android:name=".project_detail"
+            android:label="Project Name"/>
         <activity android:name=".ui.login.LoginActivity" />
         <activity
             android:name=".nopriority"
@@ -28,8 +34,7 @@
             android:name=".projectpriority"
             android:label="Project Priority" />
         <activity
-            android:name=".login_basic"
-            android:label="Login">
+            android:name=".login_basic">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
